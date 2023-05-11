@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">кнопочка</button>
+    <script>
+        // let div = document.createElement('div');
+        // div.classList.add('wrapper');
+
+        // const body = document.body;
+        // body.appendChild(div);
+
+        // body.style.backgroundColor =  'red';
+
+        // let h1 = document.createElement('h1');
+        // h1.textContent = 'DOM - document object model';
+        // body.appendChild(h1);
+
+        // div.insertAdjacentElement('beforebegin', h1);
+
+        // const ul =`
+        // <ul>
+        //     <li>one</li>
+        //     <li>two</li>
+        //     <li>three</li>
+        //     <li>four</li>
+        //     <li>fife</li>
+        // </ul>    
+        // `;
+
+        // div.innerHTML = ul;
+
+        // const img = document.createElement('img');
+        // img.src = 'https://media.istockphoto.com/id/537373196/photo/trees-forming-a-heart.jpg?s=612x612&w=0&k=20&c=onZKNjkycICe4q2ZDnKi39z42Ax9tpZT7pph-2e5Seo=';
+        // img.style.width = '200px';
+        // img.classList.add('super');
+        // img.alt = 'image';
+        // div.appendChild(img);
+
+        let button = document.getElementById('btn');
+        button.counter = 0
+        const body = document.body;
+        btn.onclick = function(){
+            this.counter++
+            console.log('Нажали на кнопочку x' + this.counter);
+            body.style.backgroundColor = 'red';
+            changeBG(this)
+        }
+        button.style.border = 'none';
+        button.style.display = 'block';
+        button.style.fontSize = '20px';
+        button.style.background = 'linear-gradient(to right, #8a2387, #e94057, #f27121)';
+        button.style.color = '#fff';
+        button.style.boxShadow = '0 0 10px 0 #8a2387';
+        button.style.width = '200px';
+        button.style.height = '60px';
+        button.style.cursor = 'pointer';
+        button.style.outline = 'none';
+        button.style.margin = 'auto';
+        function changeBG(tag) {
+            if(tag.counter % 2){
+                tag.style.background = 'linear-gradient(to left, #4776e6, #8e54e9)';
+                tag.style.boxShadow = '0 0 10px 0 #4776e6';
+            }
+            else{
+                tag.style.background = 'linear-gradient(to right, #8a2387, #e94057, #f27121)';
+                tag.style.boxShadow = '0 0 10px 0 #8a2387';
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- insertAdjacentElement- 
+innerHTML- -->
